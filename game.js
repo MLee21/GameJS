@@ -19,25 +19,25 @@ bgImage.src = "images/background.png";
 
 // Ash Image
 
-var bgReady = false;
-var bgImage =  new Image();
+var HeroReady = false;
+var heroImage =  new Image();
 
 bgImage.onload = function () {
-  bgReady = true;
+  HeroReady = true;
 };
 
-bgImage.src = "images/Ash.png";
+heroImage.src = "images/Ash.png";
 
 // Pikachu Image
 
-var bgReady = false;
-var bgImage =  new Image();
+var MonsterReady = false;
+var monsterImage =  new Image();
 
 bgImage.onload = function () {
-  bgReady = true;
+  MonsterReady = true;
 };
 
-bgImage.src = "images/PikachuSilver.png";
+monsterImage.src = "images/PikachuSilver.png";
 
 
 // Game objects
@@ -103,4 +103,26 @@ var update = function (modifier) {
       ++ monsterCaught;
       reset();
     }
+
+    // Render objects
+
+  var render = function () {
+  if (bgReady) {
+    context.drawImage(bgImage, 0, 0);
+  }
+
+  if (heroReady) {
+    context.drawImage(heroImage, hero.x, hero.y);
+  }
+
+  if (monsterReady) {
+    context.drawImage(monsterImage, monster.x, monster.y);
+  }
+
+  // Score
+  context.fillStyle = "rgb(250, 250, 250)";
+  context.font = "24px Helvetica";
+  context.textAlign = "left";
+  context.textBaseline = "top";
+  context.fillText("Monsterrs caught: " + monstersCaught, 32, 32);
 };
