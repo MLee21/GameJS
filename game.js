@@ -54,3 +54,15 @@ var monster = {
 };
 
 var monstersCaught = 0;
+
+// Handle keyboard controls
+
+var keysDown = {};
+
+addEventListener("keydown", function (event) {
+  keysDown[event.keyCode] = true;
+}, false);
+
+addEventListener("keyup", function (event) {
+  delete keysDown[event.keyCode];
+}, false);
