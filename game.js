@@ -15,7 +15,7 @@ bgImage.onload = function () {
   bgReady = true;
 };
 
-bgImage.src = "images/background.png"
+bgImage.src = "images/background.png";
 
 // Ash Image
 
@@ -26,7 +26,7 @@ bgImage.onload = function () {
   bgReady = true;
 };
 
-bgImage.src = "images/Ash.png"
+bgImage.src = "images/Ash.png";
 
 // Pikachu Image
 
@@ -37,4 +37,20 @@ bgImage.onload = function () {
   bgReady = true;
 };
 
-bgImage.src = "images/PikachuSilver.png"
+bgImage.src = "images/PikachuSilver.png";
+
+
+// Game objects
+
+var hero = {
+  speed: 256,
+  x: 0,
+  y: 0
+};
+
+var monster = {
+  x: 0,
+  y: 0
+};
+
+var monstersCaught = 0;
