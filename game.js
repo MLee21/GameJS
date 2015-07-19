@@ -66,3 +66,13 @@ addEventListener("keydown", function (event) {
 addEventListener("keyup", function (event) {
   delete keysDown[event.keyCode];
 }, false);
+
+//New Game
+
+var reset = function () {
+  hero.x = canvas.width / 2;
+  hero.y = canvas.height / 2;
+
+  monster.x = 32 + (Math.random() * (canvas.width - 64));
+  monster.y = 32 + (Math.random() * (canvas.height - 64));
+};
